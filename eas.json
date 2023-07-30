@@ -1,0 +1,52 @@
+{
+    "cli": {
+      "version": ">= 3.7.2"
+    },
+    "build": {
+      "development": {
+        "distribution": "internal",
+        "android": {
+          "buildType": "app-bundle"
+        },
+        "ios": {
+          "resourceClass": "m1-medium"
+        },
+        "releaseChannel": "development",
+        "env": {
+          "GRAPHQL_URL": "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/exploring-mongo-yorny/graphql",
+          "ENVIRONMENT_NAME": "development"
+        }
+      },
+      "staging": {
+        "android": {
+          "buildType": "app-bundle"
+        },
+        "ios": {
+          "resourceClass": "m1-medium"
+        },
+        "releaseChannel": "staging",
+        "env": {
+          "GRAPHQL_URL": "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/memaree-stg-tqcsi/graphql",
+          "ENVIRONMENT_NAME": "staging"
+        }
+      },
+      "production": {
+          "android": {
+              "buildType": "app-bundle"
+            },
+        "ios": {
+          "resourceClass": "m1-medium"
+        },
+        "releaseChannel": "production"
+      }
+    },
+    "submit": {
+      "production": {
+      },
+      "staging": {
+      },
+      "development": {
+      }
+    }
+  }
+  

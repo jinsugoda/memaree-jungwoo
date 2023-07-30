@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Memaree",
+    "slug": "memareeapp",
+    "version": "1.0.89",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/memaree.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "jsEngine": "hermes",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "jsEngine": "jsc",
+      "supportsTablet": true,
+      "icon": "./assets/icon_Android.png",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos. This will allow you to create posts to share.",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos.",
+        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to access your location. We use this data to tag publicly shared posts so that we can suggest content based on location.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone. We use this to record audio for your video posts.",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera. We use this to take photos and videos for your posts.",
+        "NSContactsUsageDescription": "Allow $(PRODUCT_NAME) to access your contacts. We use this to allow you to invite your friends to $(PRODUCT_NAME)."
+      },
+      "bundleIdentifier": "com.memaree.memaree",
+      "buildNumber": "1.0.89"
+    },
+    "android": {
+      "icon": "./assets/icon_Android.png",
+      "package": "com.memaree.memaree",
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
+      ],
+      "versionCode": 89
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos. This will allow you to create posts to share.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "sentry-expo"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "91fc611d-3413-4050-95b7-762cfbb5eda9"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "memaree",
+            "project": "memareeapp"
+          }
+        }
+      ]
+    },
+    "owner": "memaree"
+  }
+}

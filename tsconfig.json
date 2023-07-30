@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"],
+      "assets/*": ["assets/*"]
+    }
+  },
+  "extends": "expo/tsconfig.base",
+  "types": ["react-native", "@react-native-community/typings/md3"],
+  "include": ["src", "./declarations.d.ts"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "src/components_old/*"]
+}

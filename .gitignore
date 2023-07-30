@@ -1,0 +1,8 @@
+node_modules/
+# environment.ts
+# .env
+
+.VSCodeCounter/
+
+.expo/packager-info.json
+# .expo/settings.json
